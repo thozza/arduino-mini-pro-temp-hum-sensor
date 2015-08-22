@@ -1,8 +1,12 @@
 build:
         script:
+                # load all submodules
+                - git submodule update --init --recursive
+                # prepare environment
                 - virtualenv -p python venv
                 - source venv/bin/activate
                 - pip install platformio
                 - sh prep.sh
+                # run build
                 - platformio run
                 - rm -rf .pioenvs
