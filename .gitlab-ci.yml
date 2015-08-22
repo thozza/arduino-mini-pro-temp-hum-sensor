@@ -1,0 +1,8 @@
+build:
+        script:
+                - virtualenv -p python venv
+                - source venv/bin/activate
+                - pip install --upgrade pip setuptools scons
+                - pip install platformio
+                - platformio run
+                - rm -rf .pioenvs
