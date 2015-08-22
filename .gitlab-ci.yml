@@ -3,6 +3,6 @@ build:
                 - virtualenv -p python venv
                 - source venv/bin/activate
                 - pip install platformio
-                - prep.sh
+                - sh prep.sh
                 - platformio run
                 - rm -rf .pioenvs
